@@ -1,0 +1,31 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:entity="clr-namespace:TrackList.Entity"
+        mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+        x:Class="TrackList.MainWindow"
+        Title="Authorization"
+        x:DataType="entity:AuthInfo">
+ <Grid>
+     <Grid.RowDefinitions>
+         <RowDefinition></RowDefinition>
+         <RowDefinition></RowDefinition>
+         <RowDefinition></RowDefinition>
+         <RowDefinition></RowDefinition>
+         <RowDefinition></RowDefinition>
+         <RowDefinition></RowDefinition>
+     </Grid.RowDefinitions>
+     <Grid.ColumnDefinitions>
+         <ColumnDefinition></ColumnDefinition>
+         <ColumnDefinition></ColumnDefinition>
+         <ColumnDefinition></ColumnDefinition>
+     </Grid.ColumnDefinitions>
+     <Image Grid.Row="0" Source="{Binding Logo}"  Grid.Column="2" Name="AuthImage" Width="300" Height="200" />
+     <TextBlock Grid.Row="0" Grid.Column="1" VerticalAlignment="Center" HorizontalAlignment="Center">Логин</TextBlock>
+     <TextBox Grid.Row="0" Grid.Column="1" Name="LoginTextBox" VerticalAlignment="Bottom" HorizontalAlignment="Center"></TextBox>
+     <TextBlock Grid.Row="3" Grid.Column="1" VerticalAlignment="Center" HorizontalAlignment="Center">Пароль</TextBlock>
+     <TextBox Grid.Row="3" Grid.Column="1" Name="PasswordTextBox" VerticalAlignment="Bottom" HorizontalAlignment="Center"></TextBox>
+    <Button Grid.Row="4" Grid.Column="1" Name="LoginButton" Click="LoginButton_OnClick" >Войти</Button>
+ </Grid>
+</Window>

@@ -1,0 +1,25 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+        x:Class="TrackList.DeleteWindow"
+        Title="DeleteWindow">
+   <Grid>
+       <Grid.RowDefinitions>
+           <RowDefinition></RowDefinition>
+           <RowDefinition></RowDefinition>
+           <RowDefinition></RowDefinition>
+           <RowDefinition></RowDefinition>
+       </Grid.RowDefinitions>
+<Grid.ColumnDefinitions>
+    <ColumnDefinition></ColumnDefinition>
+    <ColumnDefinition></ColumnDefinition>
+    <ColumnDefinition></ColumnDefinition>
+</Grid.ColumnDefinitions>
+       <TextBlock Grid.Row="1" FontSize="30" Width="150" Grid.Column="1" >Вы действительно хотите удалить?</TextBlock>
+       <Button Grid.Row="3" Name="YesButton" Click="YesButton_OnClick" FontSize="10" Grid.Column="0"></Button>
+       <Button Grid.Row="3" Name="NoButton" FontSize="10" Grid.Column="2"></Button>
+       
+   </Grid>
+</Window>

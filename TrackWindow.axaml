@@ -1,0 +1,49 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+        x:Class="TrackList.TrackWindow"
+        Title="Плейлист"
+        x:DataType="Track"
+        Width="800"
+        Height="600"
+        CanResize="False"
+        WindowStartupLocation="CenterScreen"
+        >
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+        </Grid.RowDefinitions>
+        <DataGrid Grid.Row="2" Width="600"
+                  Height="400" 
+                  Name="TracksDataGrid"
+                  Grid.Column="2" 
+                  AutoGenerateColumns="False"
+                  GridLinesVisibility="All"
+                  IsReadOnly="True"  >
+          <DataGrid.Columns>
+            <DataGridTextColumn Width="*" Header="Название" x:CompileBindings="False" Binding="{Binding Name}"  />
+            <DataGridTextColumn Header="Исполнитель" x:CompileBindings="False" Binding="{Binding Songer}"  />
+            <DataGridTextColumn Header="Продолжительность" x:CompileBindings="False" Binding="{Binding Duration}"  />
+            </DataGrid.Columns>
+        </DataGrid>
+        <Button Width="100" Height="70" Content="Добавить" Grid.Row="5" Grid.Column="1" Name="AddButton" Click="AddButton_OnClick"></Button>
+        <Button Width="100" Height="70" Content="Изменить" Grid.Row="5" Grid.Column="2" Name="EditButton" Click="EditButton_OnClick"></Button>
+        <Button Width="100" Height="70" Content="Удалить" Grid.Row="5" Grid.Column="3" Name="DeleteButton" Click="DeleteButton_OnClick"></Button>
+        <TextBox Width="100" Height="70" Grid.Row="6" Grid.Column="3" Name="SearchTextBox" TextChanged="SearchTextBox_OnTextChanged"  ></TextBox>
+    </Grid>
+</Window>
